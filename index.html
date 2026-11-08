@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flowroom</title>
-<meta name="description" content="Bet money on your own focus. Flowroom makes you stake cash on a block of deep work — leave it or coast and it's gone. Learn by doing, not watching.">
-<meta property="og:title" content="Flowroom — bet on your own focus">
-<meta property="og:description" content="Stake money on a block of deep work. Leave it or coast and it's gone.">
+<meta name="description" content="Flowroom turns study time into focused sessions you follow through on. Set a goal, commit to a block, and practice at the edge of your ability — the way skills actually stick.">
+<meta property="og:title" content="Flowroom — focus you follow through on">
+<meta property="og:description" content="Set a goal, commit to a focused block, and practice at the edge of your ability. Learn by doing, and watch your skills grow.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0A3A2A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231C6B4F'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23E7C65A'/%3E%3C/svg%3E">
@@ -15,132 +15,129 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
 :root{
-  --bg:#F1F4F1;--surface:#fff;--ink:#16241D;--muted:#5E6E65;--faint:#8a998f;
-  --line:#E2E8E3;--pine:#1C6B4F;--pine-deep:#0A3A2A;--gold:#B2860F;--ember:#B65A2E;
+  --bg:#F2F5F2;--surface:#fff;--ink:#17251E;--muted:#5C6C63;--faint:#889790;
+  --line:#E3E9E4;--pine:#1C6B4F;--pine-deep:#0A3A2A;--gold:#A87F10;--ember:#B65A2E;
 }
 @media (prefers-color-scheme:dark){:root{
-  --bg:#0C1511;--surface:#13201A;--ink:#E7EEE9;--muted:#94A49A;--faint:#708177;
-  --line:#1F2E27;--pine:#3FA47C;--pine-deep:#061f16;--gold:#D9B34A;--ember:#D8824F;
+  --bg:#0C1511;--surface:#13201A;--ink:#E8EFEA;--muted:#96A69C;--faint:#718278;
+  --line:#1F2E27;--pine:#43A87F;--pine-deep:#061f16;--gold:#D9B34A;--ember:#D8824F;
 }}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+.wrap{max-width:1060px;margin:0 auto;padding:0 28px}
 .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
-.eye{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.eye{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:var(--gold)}
 img{max-width:100%}
 
-/* nav */
-nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;height:60px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;height:62px}
 .mark{display:flex;align-items:center;gap:9px;font-family:"Newsreader",serif;font-size:20px;font-weight:600;letter-spacing:-.01em}
 .glyph{width:22px;height:22px;border-radius:6px;background:var(--pine);display:grid;place-items:center}
 .glyph i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:block}
+nav .platform{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--faint)}
 
-/* hero */
-.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding:88px 0 72px}
-@media(max-width:900px){.hero{grid-template-columns:1fr;gap:40px;padding:64px 0 56px}}
-.hero h1{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(40px,6.4vw,66px);line-height:1.02;letter-spacing:-.02em;margin:18px 0 20px;text-wrap:balance}
-.hero p{font-size:20px;color:var(--muted);margin:0 0 26px;max-width:46ch}
-.hero .chips{display:flex;flex-wrap:wrap;gap:8px}
+.hero{display:grid;grid-template-columns:1.02fr 1fr;gap:52px;align-items:center;padding:94px 0 78px}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:40px;padding:66px 0 56px}}
+.hero h1{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(40px,6.2vw,64px);line-height:1.04;letter-spacing:-.02em;margin:18px 0 20px;text-wrap:balance}
+.hero .sub{font-size:19.5px;color:var(--muted);margin:0 0 26px;max-width:48ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--pine);border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px}
-.shot{border-radius:14px;border:1px solid var(--line);box-shadow:0 2px 6px rgba(16,36,29,.05),0 30px 60px rgba(16,36,29,.14);display:block;width:100%}
+.shot{border-radius:14px;border:1px solid var(--line);box-shadow:0 2px 6px rgba(16,36,29,.05),0 30px 64px rgba(16,36,29,.13);display:block;width:100%}
 
-/* aha band */
-.aha{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
-.aha .wrap{padding:30px 28px;text-align:center}
-.aha p{margin:0;font-family:"Newsreader",serif;font-size:clamp(20px,3vw,27px);font-weight:400;letter-spacing:-.01em;color:var(--ink)}
-.aha b{color:var(--pine);font-weight:600}
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
+.band .wrap{padding:34px 28px;text-align:center}
+.band p{margin:0 auto;max-width:40ch;font-family:"Newsreader",serif;font-size:clamp(20px,2.9vw,26px);font-weight:400;letter-spacing:-.01em;color:var(--ink)}
+.band b{color:var(--pine);font-weight:600}
 
-/* steps */
-.how{padding:84px 0 40px}
-.how .head{text-align:center;margin-bottom:12px}
+.how{padding:86px 0 36px}
+.how .head{text-align:center}
 .how h2{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(26px,4vw,36px);letter-spacing:-.01em;margin:10px 0 0}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 36px;margin-top:48px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 40px;margin-top:50px}
 @media(max-width:760px){.grid{grid-template-columns:1fr}}
 .card .n{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .card h3{font-family:"Newsreader",serif;font-weight:500;font-size:22px;letter-spacing:-.01em;margin:8px 0 8px}
-.card p{color:var(--muted);margin:0 0 16px;font-size:15.5px;max-width:46ch}
-.card img{border-radius:11px;border:1px solid var(--line);box-shadow:0 1px 2px rgba(16,36,29,.04),0 16px 36px rgba(16,36,29,.10);width:100%}
+.card p{color:var(--muted);margin:0 0 16px;font-size:15.5px;max-width:48ch}
+.card img{border-radius:11px;border:1px solid var(--line);box-shadow:0 1px 2px rgba(16,36,29,.04),0 16px 38px rgba(16,36,29,.10);width:100%}
 
-/* why */
-.why{padding:70px 0 10px}
-.why .head{text-align:center;margin-bottom:34px}
-.whyrow{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-@media(max-width:700px){.whyrow{grid-template-columns:1fr;gap:0}}
-.why .c{padding:22px 0;border-top:1px solid var(--line)}
-@media(min-width:701px){.why .c{border-top:0;padding:0 22px;border-left:1px solid var(--line)}.why .c:first-child{border-left:0;padding-left:0}}
+.why{padding:72px 0 10px}
+.why .head{text-align:center;margin-bottom:36px}
+.whyrow{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+@media(max-width:700px){.whyrow{grid-template-columns:1fr}}
+.why .c{padding:4px 24px;border-left:1px solid var(--line)}
+.why .c:first-child{border-left:0;padding-left:0}
+@media(max-width:700px){.why .c{border-left:0;padding:20px 0;border-top:1px solid var(--line)}.why .c:first-child{border-top:0}}
 .why h4{font-size:16px;font-weight:600;margin:0 0 7px}
 .why p{font-size:15px;color:var(--muted);margin:0}
 
-footer{margin-top:72px;border-top:1px solid var(--line)}
+footer{margin-top:74px;border-top:1px solid var(--line)}
 footer .wrap{padding:30px 28px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:var(--faint);font-size:13.5px}
 </style>
 </head>
 <body>
 
-<nav><div class="wrap"><span class="mark"><span class="glyph"><i></i></span>Flowroom</span></div></nav>
+<nav><div class="wrap"><span class="mark"><span class="glyph"><i></i></span>Flowroom</span><span class="platform">Deep work · for Mac</span></div></nav>
 
 <header><div class="wrap hero">
   <div>
-    <span class="eye">Focus app · for Mac</span>
-    <h1>Bet on your own focus.</h1>
-    <p>Flowroom makes you stake money on a block of deep work. Leave it or coast, and it's gone. So you actually show up — and you learn by doing, not watching.</p>
+    <span class="eye">Focus &amp; deliberate practice</span>
+    <h1>Focus you follow through on.</h1>
+    <p class="sub">Flowroom turns study time into focused sessions you actually keep. Set a goal, commit to a block with real skin in the game, and practice at the edge of your ability — the way skills genuinely stick.</p>
     <div class="chips">
-      <span class="chip">stake → focus</span>
-      <span class="chip">leave → you lose it</span>
-      <span class="chip">practice, don't watch</span>
+      <span class="chip">commit to a goal</span>
+      <span class="chip">practice, don't re-read</span>
+      <span class="chip">watch your skills grow</span>
     </div>
   </div>
-  <div><img class="shot" src="assets/block.png" alt="A Flowroom focus block — a problem, a clock, and money at stake"></div>
+  <div><img class="shot" src="assets/block.png" alt="A Flowroom focus session — a problem, a timer, and a clear goal"></div>
 </div></header>
 
-<section class="aha"><div class="wrap">
-  <p>No willpower required. Just <b>money you don't want to lose</b> — and problems pitched right at your edge.</p>
+<section class="band"><div class="wrap">
+  <p>A simple idea: a little <b>skin in the game</b>, and problems pitched right at your level. You show up, and the learning compounds.</p>
 </div></section>
 
 <section class="how"><div class="wrap">
-  <div class="head"><span class="eye">How it works</span><h2>Commit. Lock in. Grow.</h2></div>
+  <div class="head"><span class="eye">How it works</span><h2>Commit. Focus. Grow.</h2></div>
   <div class="grid">
     <div class="card">
       <span class="n">01 — Commit</span>
-      <h3>Stake it, and you can't back out.</h3>
-      <p>Say what you want to get better at, pick a length and a stake. Once you commit, it's binding — you start it or you forfeit.</p>
+      <h3>Set a goal and a stake.</h3>
+      <p>Tell Flowroom what you want to get better at and how long you'll work. Add a stake to hold yourself to it — your commitment, made real.</p>
       <img src="assets/home.png" alt="Flowroom home" loading="lazy">
     </div>
     <div class="card">
-      <span class="n">02 — Lock in</span>
-      <h3>Leave the block and it fails.</h3>
-      <p>Step away for more than three seconds and the session fails — the stake is gone. Coast instead of trying, and it charges you.</p>
-      <img src="assets/learn.png" alt="Learning inside a block" loading="lazy">
+      <span class="n">02 — Focus</span>
+      <h3>A block built for deep work.</h3>
+      <p>A clean, distraction-free session. Your commitment keeps you present and the problems keep you engaged — no notifications, no rabbit holes.</p>
+      <img src="assets/learn.png" alt="A focus session in progress" loading="lazy">
     </div>
     <div class="card">
       <span class="n">03 — Practice</span>
-      <h3>Stuck? It shows you once — then you redo it.</h3>
-      <p>See the worked answer, then reproduce it yourself to move on. It doesn't count until you can do it cold, so you can't fake your way through.</p>
-      <img src="assets/recall.png" alt="Rebuild from memory" loading="lazy">
+      <h3>Learn by doing, not watching.</h3>
+      <p>Problems at the edge of your ability. Stuck? See the approach, then rebuild it yourself — because you only really know it once you can do it unaided.</p>
+      <img src="assets/recall.png" alt="Rebuild a concept from memory" loading="lazy">
     </div>
     <div class="card">
       <span class="n">04 — Grow</span>
-      <h3>An honest map of what you know.</h3>
-      <p>Each skill moves on real evidence and fades if you don't return. See your gaps, and practice exactly those.</p>
-      <img src="assets/mastery.png" alt="Mastery map" loading="lazy">
+      <h3>An honest map of your progress.</h3>
+      <p>Every session updates what you've mastered and what's still shaky, so you always know exactly what to work on next.</p>
+      <img src="assets/mastery.png" alt="A map of your skills" loading="lazy">
     </div>
   </div>
 </div></section>
 
 <section class="why"><div class="wrap">
-  <div class="head"><span class="eye">Why it works</span></div>
+  <div class="head"><span class="eye">The ideas behind it</span></div>
   <div class="whyrow">
-    <div class="c"><h4>Loss over intention</h4><p>Money you'll lose now moves you more than a plan you made last week.</p></div>
-    <div class="c"><h4>Recall over re-reading</h4><p>You learn by pulling answers out of your head, not watching them go in.</p></div>
-    <div class="c"><h4>Forgetting is the signal</h4><p>Skills decay on a curve; Flowroom pulls you back right as one slips.</p></div>
+    <div class="c"><h4>Commitment devices</h4><p>A stake you set for yourself turns good intentions into follow-through.</p></div>
+    <div class="c"><h4>Active recall</h4><p>Retrieving an answer builds memory far better than reading it again.</p></div>
+    <div class="c"><h4>Spaced repetition</h4><p>Flowroom brings a skill back just before you'd forget it, so it lasts.</p></div>
   </div>
 </div></section>
 
 <footer><div class="wrap">
   <span class="glyph" style="width:18px;height:18px"><i></i></span>
-  <span>Flowroom — a small, focused Mac app for doing the reps.</span>
+  <span>Flowroom — a focused Mac app for deliberate practice.</span>
 </div></footer>
 
 </body>
