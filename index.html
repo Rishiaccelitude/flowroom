@@ -4,23 +4,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Flowroom</title>
-<meta name="description" content="Flowroom turns study time into focused sessions you follow through on. Set a goal, commit to a block, and practice at the edge of your ability — the way skills actually stick.">
-<meta property="og:title" content="Flowroom — focus you follow through on">
-<meta property="og:description" content="Set a goal, commit to a focused block, and practice at the edge of your ability. Learn by doing, and watch your skills grow.">
+<meta name="description" content="Most learning dies as a good intention. Flowroom turns it into reps you actually do — commit to a focused block, practice at your edge, and watch your skills grow.">
+<meta property="og:title" content="Flowroom — where intention becomes skill">
+<meta property="og:description" content="You don't have a knowledge problem. You have a follow-through problem. Flowroom fixes that.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0A3A2A">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231C6B4F'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23E7C65A'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
 :root{
-  --bg:#F2F5F2;--surface:#fff;--ink:#17251E;--muted:#5C6C63;--faint:#889790;
+  --bg:#F2F5F2;--surface:#fff;--ink:#16241D;--muted:#5C6C63;--faint:#889790;
   --line:#E3E9E4;--pine:#1C6B4F;--pine-deep:#0A3A2A;--gold:#A87F10;--ember:#B65A2E;
 }
 @media (prefers-color-scheme:dark){:root{
-  --bg:#0C1511;--surface:#13201A;--ink:#E8EFEA;--muted:#96A69C;--faint:#718278;
-  --line:#1F2E27;--pine:#43A87F;--pine-deep:#061f16;--gold:#D9B34A;--ember:#D8824F;
+  --bg:#0B1410;--surface:#13201A;--ink:#E9F0EB;--muted:#97A79D;--faint:#728379;
+  --line:#1E2D26;--pine:#46AB82;--pine-deep:#061f16;--gold:#DBB44C;--ember:#D8824F;
 }}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -30,39 +30,44 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans",
 .eye{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.17em;text-transform:uppercase;color:var(--gold)}
 img{max-width:100%}
 
-nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 84%,transparent);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;height:62px}
 .mark{display:flex;align-items:center;gap:9px;font-family:"Newsreader",serif;font-size:20px;font-weight:600;letter-spacing:-.01em}
 .glyph{width:22px;height:22px;border-radius:6px;background:var(--pine);display:grid;place-items:center}
 .glyph i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:block}
 nav .platform{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--faint)}
 
-.hero{display:grid;grid-template-columns:1.02fr 1fr;gap:52px;align-items:center;padding:94px 0 78px}
-@media(max-width:900px){.hero{grid-template-columns:1fr;gap:40px;padding:66px 0 56px}}
-.hero h1{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(40px,6.2vw,64px);line-height:1.04;letter-spacing:-.02em;margin:18px 0 20px;text-wrap:balance}
-.hero .sub{font-size:19.5px;color:var(--muted);margin:0 0 26px;max-width:48ch}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
+/* hero */
+.hero{padding:104px 0 20px;text-align:center}
+.hero h1{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(44px,8vw,86px);line-height:0.98;letter-spacing:-.025em;margin:22px auto 24px;max-width:15ch;text-wrap:balance}
+.hero .sub{font-size:20px;color:var(--muted);margin:0 auto 34px;max-width:56ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
 .chip{font-family:"IBM Plex Mono",monospace;font-size:12.5px;color:var(--pine);border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px}
-.shot{border-radius:14px;border:1px solid var(--line);box-shadow:0 2px 6px rgba(16,36,29,.05),0 30px 64px rgba(16,36,29,.13);display:block;width:100%}
+.heroshot{margin:56px auto 0;max-width:960px}
+.heroshot img{width:100%;border-radius:16px;border:1px solid var(--line);box-shadow:0 2px 8px rgba(16,36,29,.06),0 40px 90px rgba(16,36,29,.18)}
 
-.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface)}
-.band .wrap{padding:34px 28px;text-align:center}
-.band p{margin:0 auto;max-width:40ch;font-family:"Newsreader",serif;font-size:clamp(20px,2.9vw,26px);font-weight:400;letter-spacing:-.01em;color:var(--ink)}
-.band b{color:var(--pine);font-weight:600}
+/* manifesto */
+.manifesto{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);margin-top:92px}
+.manifesto .wrap{padding:60px 28px;max-width:860px;text-align:center}
+.manifesto p{margin:0;font-family:"Newsreader",serif;font-size:clamp(23px,3.6vw,34px);font-weight:400;line-height:1.28;letter-spacing:-.01em;color:var(--ink)}
+.manifesto b{color:var(--pine);font-weight:500}
+.manifesto i{font-style:italic;color:var(--muted)}
 
-.how{padding:86px 0 36px}
+/* how */
+.how{padding:92px 0 40px}
 .how .head{text-align:center}
-.how h2{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(26px,4vw,36px);letter-spacing:-.01em;margin:10px 0 0}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 40px;margin-top:50px}
+.how h2{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(27px,4vw,38px);letter-spacing:-.015em;margin:10px 0 0}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:30px 40px;margin-top:52px}
 @media(max-width:760px){.grid{grid-template-columns:1fr}}
 .card .n{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.card h3{font-family:"Newsreader",serif;font-weight:500;font-size:22px;letter-spacing:-.01em;margin:8px 0 8px}
+.card h3{font-family:"Newsreader",serif;font-weight:500;font-size:23px;letter-spacing:-.01em;margin:8px 0 8px}
 .card p{color:var(--muted);margin:0 0 16px;font-size:15.5px;max-width:48ch}
 .card img{border-radius:11px;border:1px solid var(--line);box-shadow:0 1px 2px rgba(16,36,29,.04),0 16px 38px rgba(16,36,29,.10);width:100%}
 
-.why{padding:72px 0 10px}
-.why .head{text-align:center;margin-bottom:36px}
-.whyrow{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+/* why */
+.why{padding:76px 0 10px}
+.why .head{text-align:center;margin-bottom:38px}
+.whyrow{display:grid;grid-template-columns:repeat(3,1fr)}
 @media(max-width:700px){.whyrow{grid-template-columns:1fr}}
 .why .c{padding:4px 24px;border-left:1px solid var(--line)}
 .why .c:first-child{border-left:0;padding-left:0}
@@ -70,7 +75,12 @@ nav .platform{margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:1
 .why h4{font-size:16px;font-weight:600;margin:0 0 7px}
 .why p{font-size:15px;color:var(--muted);margin:0}
 
-footer{margin-top:74px;border-top:1px solid var(--line)}
+/* closer */
+.closer{text-align:center;padding:96px 0 40px}
+.closer h2{font-family:"Newsreader",serif;font-weight:500;font-size:clamp(28px,4.4vw,44px);letter-spacing:-.02em;margin:0 auto 14px;max-width:16ch;text-wrap:balance}
+.closer p{color:var(--muted);max-width:46ch;margin:0 auto}
+
+footer{margin-top:40px;border-top:1px solid var(--line)}
 footer .wrap{padding:30px 28px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:var(--faint);font-size:13.5px}
 </style>
 </head>
@@ -78,22 +88,20 @@ footer .wrap{padding:30px 28px;display:flex;flex-wrap:wrap;gap:10px;align-items:
 
 <nav><div class="wrap"><span class="mark"><span class="glyph"><i></i></span>Flowroom</span><span class="platform">Deep work · for Mac</span></div></nav>
 
-<header><div class="wrap hero">
-  <div>
-    <span class="eye">Focus &amp; deliberate practice</span>
-    <h1>Focus you follow through on.</h1>
-    <p class="sub">Flowroom turns study time into focused sessions you actually keep. Set a goal, commit to a block with real skin in the game, and practice at the edge of your ability — the way skills genuinely stick.</p>
-    <div class="chips">
-      <span class="chip">commit to a goal</span>
-      <span class="chip">practice, don't re-read</span>
-      <span class="chip">watch your skills grow</span>
-    </div>
+<header class="hero"><div class="wrap">
+  <span class="eye">Deep work &amp; deliberate practice</span>
+  <h1>Where intention becomes skill.</h1>
+  <p class="sub">Most learning dies as a good intention. Flowroom turns it into reps you actually do — commit to a focused block, practice at the edge of your ability, and watch an honest map of your skills grow.</p>
+  <div class="chips">
+    <span class="chip">commit to a goal</span>
+    <span class="chip">practice, don't re-read</span>
+    <span class="chip">skills that stick</span>
   </div>
-  <div><img class="shot" src="assets/block.png" alt="A Flowroom focus session — a problem, a timer, and a clear goal"></div>
+  <div class="heroshot"><img src="assets/block.png" alt="A Flowroom focus session — a problem, a timer, and a clear goal"></div>
 </div></header>
 
-<section class="band"><div class="wrap">
-  <p>A simple idea: a little <b>skin in the game</b>, and problems pitched right at your level. You show up, and the learning compounds.</p>
+<section class="manifesto"><div class="wrap">
+  <p>You don't have a knowledge problem. You have a <b>follow-through</b> problem. <i>Flowroom is built for exactly that</i> — a little skin in the game, problems pitched at your level, and progress you can see.</p>
 </div></section>
 
 <section class="how"><div class="wrap">
@@ -101,13 +109,13 @@ footer .wrap{padding:30px 28px;display:flex;flex-wrap:wrap;gap:10px;align-items:
   <div class="grid">
     <div class="card">
       <span class="n">01 — Commit</span>
-      <h3>Set a goal and a stake.</h3>
-      <p>Tell Flowroom what you want to get better at and how long you'll work. Add a stake to hold yourself to it — your commitment, made real.</p>
+      <h3>Name a goal. Put something on it.</h3>
+      <p>Tell Flowroom what you're working toward and it builds a prioritized plan. Add a stake to hold yourself to it — your commitment, made real.</p>
       <img src="assets/home.png" alt="Flowroom home" loading="lazy">
     </div>
     <div class="card">
       <span class="n">02 — Focus</span>
-      <h3>A block built for deep work.</h3>
+      <h3>A room built for deep work.</h3>
       <p>A clean, distraction-free session. Your commitment keeps you present and the problems keep you engaged — no notifications, no rabbit holes.</p>
       <img src="assets/learn.png" alt="A focus session in progress" loading="lazy">
     </div>
@@ -120,7 +128,7 @@ footer .wrap{padding:30px 28px;display:flex;flex-wrap:wrap;gap:10px;align-items:
     <div class="card">
       <span class="n">04 — Grow</span>
       <h3>An honest map of your progress.</h3>
-      <p>Every session updates what you've mastered and what's still shaky, so you always know exactly what to work on next.</p>
+      <p>Every session updates what you've mastered and what's still shaky — so you always know the one thing to work on next.</p>
       <img src="assets/mastery.png" alt="A map of your skills" loading="lazy">
     </div>
   </div>
@@ -135,9 +143,14 @@ footer .wrap{padding:30px 28px;display:flex;flex-wrap:wrap;gap:10px;align-items:
   </div>
 </div></section>
 
+<section class="closer"><div class="wrap">
+  <h2>Do the reps. Keep the skill.</h2>
+  <p>A focused Mac app for people who are done starting over.</p>
+</div></section>
+
 <footer><div class="wrap">
   <span class="glyph" style="width:18px;height:18px"><i></i></span>
-  <span>Flowroom — a focused Mac app for deliberate practice.</span>
+  <span>Flowroom — deliberate practice, for Mac.</span>
 </div></footer>
 
 </body>
